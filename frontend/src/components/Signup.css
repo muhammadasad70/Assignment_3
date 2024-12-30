@@ -1,0 +1,54 @@
+.signup {
+    background-color: #1c1c1c; /* Darker shade for signup section */
+    padding: 50px 0;
+    text-align: center;
+  }
+  
+  .signup h2 {
+    color: #ff9800; /* Orange tone for heading */
+  }
+  
+  .signup form {
+    background-color: #2c2c2c; /* Slightly lighter shade for form */
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 400px;
+  }
+  
+  .signup form input,
+  .signup form select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    background-color: #424242; /* Darker input background */
+    color: #e0e0e0;
+  }
+  
+  .signup form button {
+    background-color: #ff9800; /* Orange tone for button */
+    border: none;
+    color: #121212;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .signup form button:hover {
+    background-color: #e68a00; /* Darker orange for hover */
+  }
+  
+  .signup p {
+    color: #e0e0e0;
+  }
+  
+  .signup p a {
+    color: #ff9800; /* Orange tone for link */
+    text-decoration: none;
+  }
+  
+  .signup p a:hover {
+    color: #e68a00; /* Darker orange for hover */
+  }

@@ -1,0 +1,35 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "shell",
+			"label": "npm install jsonwebtoken",
+			"command": "npm",
+			"args": [
+				"install",
+				"jsonwebtoken"
+			],
+			"options": {
+				"cwd": "${workspaceFolder}/backend"
+			},
+			"presentation": {
+				"reveal": "silent"
+			}
+		},
+		{
+			"type": "shell",
+			"label": "npm install google-auth-library",
+			"command": "npm",
+			"args": [
+				"install",
+				"google-auth-library"
+			],
+			"options": {
+				"cwd": "${workspaceFolder}/backend"
+			},
+			"presentation": {
+				"reveal": "silent"
+			}
+		}
+	]
+}

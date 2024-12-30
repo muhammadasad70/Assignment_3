@@ -1,0 +1,70 @@
+.hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+  }
+  
+  .background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+  
+  .card {
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    color: #e0e0e0;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 400px;
+  }
+  
+  .card h3 {
+    color: #ff9800; /* Orange tone for heading */
+  }
+  
+  .card h1 {
+    color: #ff9800; /* Orange tone for heading */
+  }
+  
+  .card p {
+    color: #e0e0e0;
+  }
+  
+  .card a {
+    background-color: #ff9800; /* Orange tone for button */
+    border: none;
+    color: #121212;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-decoration: none;
+  }
+  
+  .card a:hover {
+    background-color: #e68a00; /* Darker orange for hover */
+  }
+
+  .plan-now-button {
+    background-color: #ff9800; /* Orange tone */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .plan-now-button:hover {
+    background-color: #e68900; /* Darker orange on hover */
+  }
+  

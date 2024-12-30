@@ -1,0 +1,331 @@
+/* General Styles */
+body {
+  background-color: #121212; /* Dark background */
+  color: #e0e0e0; /* Light text color */
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  background-color: #1c1c1c; /* Darker shade for navbar */
+  color: #e0e0e0;
+  padding: 10px 0;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  margin: 0;
+}
+
+nav ul li {
+  margin: 0 10px;
+}
+
+nav ul li a {
+  color: #e0e0e0;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  color: #ff9800; /* Orange tone for hover */
+}
+
+nav ul li button {
+  background: none;
+  border: none;
+  color: #e0e0e0;
+  cursor: pointer;
+}
+
+nav ul li button:hover {
+  color: #ff9800; /* Orange tone for hover */
+}
+
+
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.card {
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  color: #e0e0e0;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  max-width: 400px;
+}
+
+.card h3 {
+  color: #ff9800; /* Orange tone for heading */
+}
+
+.card h1 {
+  color: #ff9800; /* Orange tone for heading */
+}
+
+.card p {
+  color: #e0e0e0;
+}
+
+.card a {
+  background-color: #ff9800; /* Orange tone for button */
+  border: none;
+  color: #121212;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.card a:hover {
+  background-color: #e68a00; /* Darker orange for hover */
+}
+
+.plan-now-button {
+  background-color: #ff9800; /* Orange tone */
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.plan-now-button:hover {
+  background-color: #e68900; /* Darker orange on hover */
+}
+
+/* Services Section */
+.services {
+  background-color: #1c1c1c; /* Darker shade for services section */
+  padding: 50px 0;
+  text-align: center;
+}
+
+.services h2 {
+  color: #ff9800; /* Orange tone for heading */
+}
+
+.services .service-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.services .service-card {
+  background-color: #2c2c2c; /* Slightly lighter shade for cards */
+  color: #e0e0e0;
+  margin: 10px;
+  padding: 20px;
+  border-radius: 10px;
+  width: 30%;
+  box-sizing: border-box;
+}
+
+.services .service-card h3 {
+  color: #ff9800; /* Orange tone for service titles */
+}
+
+/* Event Section */
+.event {
+  background-color: #1c1c1c; /* Darker shade for event section */
+  padding: 50px 0;
+  text-align: center;
+}
+
+.event h2 {
+  color: #ff9800; /* Orange tone for heading */
+}
+
+.event ul {
+  list-style: none;
+  padding: 0;
+}
+
+.event ul li {
+  background-color: #2c2c2c; /* Slightly lighter shade for list items */
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.event ul li h3 {
+  color: #ff9800; /* Orange tone for event titles */
+}
+
+.event ul li p {
+  color: #e0e0e0;
+}
+
+.event ul li button {
+  background: #424242; /* Dark button background */
+  border: none;
+  color: #e0e0e0;
+  cursor: pointer;
+  padding: 5px 10px;
+  margin: 5px;
+  border-radius: 3px;
+}
+
+.event ul li button:hover {
+  background: #616161; /* Slightly lighter shade for hover */
+}
+
+.event ul li button.delete {
+  background: #d32f2f; /* Red for delete button */
+}
+
+.event ul li button.delete:hover {
+  background: #c62828; /* Darker red for delete button hover */
+}
+
+.event form {
+  background-color: #2c2c2c; /* Slightly lighter shade for form */
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px 0;
+}
+
+.event form input,
+.event form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  background-color: #424242; /* Darker input background */
+  color: #e0e0e0;
+}
+
+.event form button {
+  background-color: #ff9800; /* Orange tone for button */
+  border: none;
+  color: #121212;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.event form button:hover {
+  background-color: #e68a00; /* Darker orange for hover */
+}
+
+/* Contact Section */
+.contact {
+  background-color: #1c1c1c; /* Darker shade for contact section */
+  padding: 50px 0;
+  text-align: center;
+}
+
+.contact h2 {
+  color: #ff9800; /* Orange tone for heading */
+}
+
+.contact p {
+  color: #e0e0e0;
+}
+
+.contact form {
+  background-color: #2c2c2c; /* Slightly lighter shade for form */
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px 0;
+}
+
+.contact form input,
+.contact form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  background-color: #424242; /* Darker input background */
+  color: #e0e0e0;
+}
+
+.contact form button {
+  background-color: #ff9800; /* Orange tone for button */
+  border: none;
+  color: #121212;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.contact form button:hover {
+  background-color: #e68a00; /* Darker orange for hover */
+}
+
+
+
+/* Footer */
+footer {
+  background-color: #1c1c1c; /* Darker shade for footer */
+  color: #e0e0e0;
+  text-align: center;
+  padding: 20px 0;
+}
+
+footer .newsletter {
+  margin-top: 20px;
+}
+
+footer .newsletter input[type="email"] {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+footer .newsletter button {
+  background-color: #ff9800; /* Orange tone */
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+footer .newsletter button:hover {
+  background-color: #e68900; /* Darker orange on hover */
+}
+
+/* About Section */
+.about {
+  background-color: #1c1c1c; /* Darker shade for about section */
+  padding: 50px 0;
+  text-align: center;
+}
+
+.about h2 {
+  color: #ff9800; /* Orange tone for heading */
+}
+
+.about p {
+  color: #e0e0e0;
+}
