@@ -1,0 +1,17 @@
+{
+  "name": "eventease2",
+  "version": "1.0.0",
+  "description": "EventEase2 is a MERN stack-based web application for event management. It allows admins to create, update, and delete events, while users can view and book events. The project supports multiple event types and is designed to be scalable for use beyond a single university or organization.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "node tests/testSuite.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chromedriver": "^137.0.3",
+    "selenium-webdriver": "^4.33.0"
+  }
+}

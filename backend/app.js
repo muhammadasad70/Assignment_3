@@ -6,7 +6,8 @@ import eventRouter from "./router/eventRouter.js";
 import authRouter from "./router/authRouter.js";
 import cors from "cors";
 
-dotenv.config({ path: "./config/.env" }); // Load environment variables
+// ✅ Corrected: Load from default .env in root of backend/
+dotenv.config();
 
 const app = express();
 
