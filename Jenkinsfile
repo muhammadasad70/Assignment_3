@@ -91,19 +91,19 @@ pipeline {
       }
     }
 
-    stage('Build Docker Images') {
-      steps {
-        echo 'Building Docker images...'
-        sh 'docker-compose build'
-      }
-    }
+    // stage('Build Docker Images') {
+    //   steps {
+    //     echo 'Building Docker images...'
+    //     sh 'docker-compose build'
+    //   }
+    // }
 
-    stage('Run Containers') {
-      steps {
-        echo 'Running services using Docker Compose...'
-        sh 'docker-compose up -d'
-      }
-    }
+    // stage('Run Containers') {
+    //   steps {
+    //     echo 'Running services using Docker Compose...'
+    //     sh 'docker-compose up -d'
+    //   }
+    // }
 
     stage('Run Backend Tests') {
       steps {
