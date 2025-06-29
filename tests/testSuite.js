@@ -3,25 +3,24 @@ import chrome from 'selenium-webdriver/chrome.js';
 import fs from 'fs';
 import path from 'path';
 
-// Helper to save screenshots
-async function saveScreenshot(name) {
-  const image = await driver.takeScreenshot();
-  const filePath = path.join('.', `screenshot-${name}.png`);
-  fs.writeFileSync(filePath, image, 'base64');
-  console.log(`📸 Screenshot saved: ${filePath}`);
-}
-
-const options = new chrome.Options();
-options.addArguments('--headless', '--disable-gpu', '--no-sandbox');
-
-const driver = await new Builder()
-  .forBrowser('chrome')
-  .setChromeOptions(options)
-  .build();
-
-const baseUrl = 'http://localhost:5173';
+const baseUrl = 'http://localhost:5173';  // Update this if running on a different port or IP
 
 async function runTests() {
+  const options = new chrome.Options();
+  options.addArguments('--headless', '--disable-gpu', '--no-sandbox');
+
+  const driver = await new Builder()
+    .forBrowser('chrome')
+    .setChromeOptions(options)
+    .build();
+
+  async function saveScreenshot(name) {
+    const image = await driver.takeScreenshot();
+    const filePath = path.join('.', `screenshot-${name}.png`);
+    fs.writeFileSync(filePath, image, 'base64');
+    console.log(`📸 Screenshot saved: ${filePath}`);
+  }
+
   try {
     await driver.get(baseUrl);
     console.log('✅ 1. Homepage loaded');
@@ -58,14 +57,12 @@ async function runTests() {
     await driver.sleep(2000);
     await saveScreenshot('06-valid-login');
 
-    console.log('✅ 7. Simulated wait for post-login state');
-
     try {
       const menuBtn = await driver.findElement(By.css('.menu-button, .hamburger, .nav-toggle'));
       await menuBtn.click();
-      console.log('☰ 8. Opened mobile nav menu');
+      console.log('☰ 7. Opened mobile nav menu');
     } catch {
-      console.log('ℹ️ 8. No mobile menu found or needed');
+      console.log('ℹ️ 7. No mobile menu found or needed');
     }
     await saveScreenshot('07-after-login');
 
@@ -73,14 +70,10 @@ async function runTests() {
       until.elementLocated(By.xpath("//*[contains(translate(text(),'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz'),'services')]")),
       7000
     );
-    try {
-      await driver.executeScript("arguments[0].scrollIntoView(true);", servicesLink);
-      await driver.wait(until.elementIsVisible(servicesLink), 3000);
-    } catch {
-      console.warn('⚠️ 9. Services not interactable – clicking via JS');
-    }
+    await driver.executeScript("arguments[0].scrollIntoView(true);", servicesLink);
+    await driver.wait(until.elementIsVisible(servicesLink), 3000);
     await driver.executeScript("arguments[0].click();", servicesLink);
-    console.log('✅ 9. Navigated to Services page');
+    console.log('✅ 8. Navigated to Services page');
     await driver.sleep(1500);
     await saveScreenshot('08-services');
 
@@ -88,18 +81,14 @@ async function runTests() {
       until.elementLocated(By.xpath("//*[contains(translate(text(),'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz'),'about')]")),
       7000
     );
-    try {
-      await driver.executeScript("arguments[0].scrollIntoView(true);", aboutLink);
-      await driver.wait(until.elementIsVisible(aboutLink), 3000);
-    } catch {
-      console.warn('⚠️ 10. About not interactable – clicking via JS');
-    }
+    await driver.executeScript("arguments[0].scrollIntoView(true);", aboutLink);
+    await driver.wait(until.elementIsVisible(aboutLink), 3000);
     await driver.executeScript("arguments[0].click();", aboutLink);
-    console.log('✅ 10. Navigated to About page');
+    console.log('✅ 9. Navigated to About page');
     await driver.sleep(1500);
     await saveScreenshot('09-about');
 
-    console.log('🎉 Test suite completed successfully!');
+    console.log('🎉 10. Test suite completed successfully!');
   } catch (err) {
     console.error('❌ Test failed:', err.message);
     try {
@@ -112,4 +101,7 @@ async function runTests() {
   }
 }
 
-runTests();
+// Wrap in top-level async IIFE
+(async () => {
+  await runTests();
+})();
