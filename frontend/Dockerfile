@@ -1,8 +1,10 @@
+# frontend/Dockerfile
 # Stage 1 – Build the React app
 FROM node:20 AS builder
 WORKDIR /app
-COPY . .
+COPY package*.json ./
 RUN npm install
+COPY . .
 RUN npm run build
 
 # Stage 2 – Serve with Nginx
