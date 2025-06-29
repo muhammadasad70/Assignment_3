@@ -1,6 +1,6 @@
 # frontend/Dockerfile
 
-# Stage 1 – Build the React app
+# Stage 1 – Build the Vite app
 FROM node:20 AS builder
 WORKDIR /app
 COPY package*.json ./
